@@ -21,8 +21,6 @@ public class GruposModel {
 
     private String nome;
 
-    private TarefaModel tarefa;
-
     // Um grupo pode ter várias tasks
     @OneToMany(mappedBy = "grupos")
     private List<TarefaModel> tarefas;
