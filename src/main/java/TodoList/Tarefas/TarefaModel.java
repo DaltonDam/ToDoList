@@ -1,5 +1,6 @@
-package TodoList;
+package TodoList.Tarefas;
 
+import TodoList.Grupos.GruposModel;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,6 +19,11 @@ public class TarefaModel {
 
     private LocalDateTime dataCriacao;
     private LocalDateTime dataConclusao;
+
+    // uma task tem apenas um grupo
+    @ManyToOne
+    @JoinColumn(name = "grupos_id") // Foreing Key
+    private GruposModel grupos;
 
 
 

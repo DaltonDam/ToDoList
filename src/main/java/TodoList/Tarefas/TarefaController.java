@@ -1,4 +1,4 @@
-package TodoList;
+package TodoList.Tarefas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
