@@ -17,11 +17,19 @@ public class TarefaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "descricao")
     private String descricao;
+
+    @Column(name = "status")
     private String status;
 
+    @Column(name = "data_criacao")
     private LocalDateTime dataCriacao;
+
+    @Column(name = "data_conclusao")
     private LocalDateTime dataConclusao;
 
     // uma task tem apenas um grupo
