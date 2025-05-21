@@ -23,8 +23,9 @@ public class TarefaModel {
     @Column(name = "descricao")
     private String descricao;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "status")
-    private String status;
+    private StatusTarefa status;
 
     @Column(name = "data_criacao")
     private LocalDateTime dataCriacao;
