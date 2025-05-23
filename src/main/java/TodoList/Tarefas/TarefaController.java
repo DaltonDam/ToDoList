@@ -1,10 +1,19 @@
 package TodoList.Tarefas;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/tarefas")
 public class TarefaController {
+
+    private TarefaService tarefaService;
+
+    public TarefaController(TarefaService tarefaService) {
+        this.tarefaService = tarefaService;
+    }
 
     @PostMapping("/criar")
     public String criarTarefa() {
@@ -12,8 +21,8 @@ public class TarefaController {
     }
 
     @GetMapping("/listar")
-    public String mostrarTodasAsTarefas() {
-        return "Tarefas";
+    public List<TarefaModel> listarTarefas() {
+        return tarefaService.listarTarefas();
     }
 
     @GetMapping("/listarID")
