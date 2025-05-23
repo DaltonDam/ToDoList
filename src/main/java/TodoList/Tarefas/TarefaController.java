@@ -3,25 +3,20 @@ package TodoList.Tarefas;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping
+@RequestMapping("/tarefas")
 public class TarefaController {
-
-    @GetMapping("/boasvindas")
-    public String boasvindas() {
-        return "Mensagem de Teste";
-    }
 
     @PostMapping("/criar")
     public String criarTarefa() {
         return "Tarefa criada";
     }
 
-    @GetMapping("/todos")
+    @GetMapping("/listar")
     public String mostrarTodasAsTarefas() {
         return "Tarefas";
     }
 
-    @GetMapping("/todosID")
+    @GetMapping("/listarID")
     public String mostrarTarefasPorId() {
         return "Mostrar Tarefa por id";
     }
