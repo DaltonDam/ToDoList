@@ -35,9 +35,9 @@ public class TarefaController {
         return "Alterar Tarefa por id";
     }
 
-    @DeleteMapping("/deletarID")
-    public String deletarTarefaPorId() {
-        return "Tarefa deletada";
+    @DeleteMapping("/deletar/{id}")
+    public void deletarTarefaPorId(@PathVariable Long id) {
+        tarefaService.deletarTarefaPorId(id);
     }
 
 }
