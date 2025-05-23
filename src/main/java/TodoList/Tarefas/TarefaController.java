@@ -30,9 +30,9 @@ public class TarefaController {
         return tarefaService.listarTarefasPorId(id);
     }
 
-    @PutMapping("/alterarID")
-    public String alterarTarefasPorId() {
-        return "Alterar Tarefa por id";
+    @PutMapping("/alterar/{id}")
+    public TarefaModel alterarTarefasPorId(@PathVariable Long id, @RequestBody TarefaModel tarefaAtualizada) {
+        return tarefaService.atualizarTarefa(id, tarefaAtualizada);
     }
 
     @DeleteMapping("/deletar/{id}")
