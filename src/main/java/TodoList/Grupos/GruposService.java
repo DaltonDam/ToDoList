@@ -31,5 +31,13 @@ public class GruposService {
         gruposRepository.deleteById(id);
     }
 
+    public GruposModel atualizarGrupo(Long id, GruposModel gruposAtualizado) {
+        if(gruposRepository.existsById(id)) {
+            gruposAtualizado.setId(id);
+            gruposRepository.save(gruposAtualizado);
+        }
+        return null;
+    }
+
 
 }

@@ -29,9 +29,9 @@ public class GruposController {
         return gruposService.criarGrupoPorId(gruposModel);
     }
 
-    @PutMapping("/alterar")
-    public String alterarGrupo() {
-        return "Grupo alterado";
+    @PutMapping("/alterar/{id}")
+    public GruposModel alterarGrupo(Long id, GruposModel grupoAtualizado) {
+        return gruposService.atualizarGrupo(id, grupoAtualizado);
     }
 
     @DeleteMapping("/deletar/{id}")
