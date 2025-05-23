@@ -1,17 +1,39 @@
 package TodoList.Tarefas;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping
 public class TarefaController {
 
-    @GetMapping("/welcome")
-    public String welcome() {
-        return "Welcome";
+    @GetMapping("/boasvindas")
+    public String boasvindas() {
+        return "Mensagem de Teste";
     }
 
+    @PostMapping("/criar")
+    public String criarTarefa() {
+        return "Tarefa criada";
+    }
+
+    @GetMapping("/todos")
+    public String mostrarTodasAsTarefas() {
+        return "Tarefas";
+    }
+
+    @GetMapping("/todosID")
+    public String mostrarTarefasPorId() {
+        return "Mostrar Tarefa por id";
+    }
+
+    @PutMapping("/alterarID")
+    public String alterarTarefasPorId() {
+        return "Alterar Tarefa por id";
+    }
+
+    @DeleteMapping("/deletarID")
+    public String deletarTarefaPorId() {
+        return "Tarefa deletada";
+    }
 
 }
