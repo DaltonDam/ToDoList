@@ -16,8 +16,8 @@ public class TarefaController {
     }
 
     @PostMapping("/criar")
-    public String criarTarefa() {
-        return "Tarefa criada";
+    public TarefaModel criarTarefa(@RequestBody TarefaModel tarefa) {
+        return tarefaService.criarTarefa(tarefa);
     }
 
     @GetMapping("/listar")

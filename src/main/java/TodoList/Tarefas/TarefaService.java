@@ -23,4 +23,8 @@ public class TarefaService {
         return tarefaPorID.orElse(null);
     }
 
+    public TarefaModel criarTarefa(TarefaModel tarefa) {
+        return tarefaRepository.save(tarefa);
+    }
+
 }
