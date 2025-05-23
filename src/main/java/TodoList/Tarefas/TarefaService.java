@@ -1,9 +1,9 @@
 package TodoList.Tarefas;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TarefaService {
@@ -16,6 +16,11 @@ public class TarefaService {
 
     public List<TarefaModel> listarTarefas() {
         return tarefaRepository.findAll();
+    }
+
+    public TarefaModel listarTarefasPorId(Long id) {
+        Optional<TarefaModel> tarefaPorID = tarefaRepository.findById(id);
+        return tarefaPorID.orElse(null);
     }
 
 }

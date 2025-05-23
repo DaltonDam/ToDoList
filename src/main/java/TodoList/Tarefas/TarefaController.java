@@ -25,9 +25,9 @@ public class TarefaController {
         return tarefaService.listarTarefas();
     }
 
-    @GetMapping("/listarID")
-    public String mostrarTarefasPorId() {
-        return "Mostrar Tarefa por id";
+    @GetMapping("/listar/{id}")
+    public TarefaModel listarTarefasPorId(@PathVariable Long id) {
+        return tarefaService.listarTarefasPorId(id);
     }
 
     @PutMapping("/alterarID")
