@@ -1,6 +1,7 @@
 package TodoList.Grupos;
 
 import TodoList.Tarefas.TarefaModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class GruposModel {
 
     // Um grupo pode ter várias tasks
     @OneToMany(mappedBy = "grupos")
+    @JsonIgnore
     private List<TarefaModel> tarefas;
 
 
