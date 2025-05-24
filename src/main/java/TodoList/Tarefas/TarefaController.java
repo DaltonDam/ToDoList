@@ -15,7 +15,7 @@ public class TarefaController {
     }
 
     @PostMapping("/criar")
-    public TarefaModel criarTarefa(@RequestBody TarefaModel tarefa) {
+    public TarefaDTO criarTarefa(@RequestBody TarefaDTO tarefa) {
         return tarefaService.criarTarefa(tarefa);
     }
 

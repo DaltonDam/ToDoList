@@ -9,9 +9,11 @@ import java.util.Optional;
 public class TarefaService {
 
     private TarefaRepository tarefaRepository;
+    private TarefaMapper tarefaMapper;
 
-    public TarefaService(TarefaRepository tarefaRepository) {
+    public TarefaService(TarefaRepository tarefaRepository, TarefaMapper tarefaMapper) {
         this.tarefaRepository = tarefaRepository;
+        this.tarefaMapper = tarefaMapper;
     }
 
     public List<TarefaModel> listarTarefas() {
@@ -23,8 +25,10 @@ public class TarefaService {
         return tarefaPorID.orElse(null);
     }
 
-    public TarefaModel criarTarefa(TarefaModel tarefa) {
-        return tarefaRepository.save(tarefa);
+    public TarefaDTO criarTarefa(TarefaDTO tarefaDTO) {
+        TarefaModel tarefa = tarefaMapper.map(tarefaDTO);
+        tarefa = tarefaRepository.save(tarefa);
+        return tarefaMapper.map(tarefa);
     }
 
     public void deletarTarefaPorId(Long id) {
