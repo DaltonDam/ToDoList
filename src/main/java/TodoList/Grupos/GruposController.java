@@ -25,7 +25,7 @@ public class GruposController {
     }
 
     @PostMapping("/criar")
-    public GruposDTO GruposDTO(GruposDTO grupos) {
+    public GruposDTO GruposDTO(@RequestBody GruposDTO grupos) {
         return gruposService.criarGrupoPorId(grupos);
     }
 
