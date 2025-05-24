@@ -33,6 +33,9 @@ public class TarefaModel {
     @Column(name = "data_conclusao")
     private LocalDateTime dataConclusao;
 
+    @Column(name = "nome")
+    private String nome;
+
     // uma task tem apenas um grupo
     @ManyToOne
     @JoinColumn(name = "grupos_id") // Foreing Key
