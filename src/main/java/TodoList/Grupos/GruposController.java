@@ -15,22 +15,22 @@ public class GruposController {
     }
 
     @GetMapping("/listar")
-    public List<GruposModel> listarGrupos() {
+    public List<GruposDTO> listarGrupos() {
         return gruposService.listarGrupos();
     }
 
     @GetMapping("/listar/{id}")
-    public GruposModel listarGrupoPorId(@PathVariable Long id) {
+    public GruposDTO listarGrupoPorId(@PathVariable Long id) {
         return gruposService.listarGrupoPorId(id);
     }
 
     @PostMapping("/criar")
-    public GruposModel criarGrupo(GruposModel gruposModel) {
-        return gruposService.criarGrupoPorId(gruposModel);
+    public GruposDTO GruposDTO(GruposDTO grupos) {
+        return gruposService.criarGrupoPorId(grupos);
     }
 
     @PutMapping("/alterar/{id}")
-    public GruposModel alterarGrupo(Long id, GruposModel grupoAtualizado) {
+    public GruposDTO alterarGrupo(@PathVariable Long id,@RequestBody GruposDTO grupoAtualizado) {
         return gruposService.atualizarGrupo(id, grupoAtualizado);
     }
 
