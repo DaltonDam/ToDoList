@@ -10,7 +10,7 @@ import java.util.List;
 @RequestMapping("/grupos")
 public class GruposController {
 
-    private GruposService gruposService;
+    private final GruposService gruposService;
 
     public GruposController(GruposService gruposService) {
         this.gruposService = gruposService;

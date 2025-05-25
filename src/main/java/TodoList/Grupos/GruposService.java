@@ -9,8 +9,8 @@ import java.util.stream.Collectors;
 @Service
 public class GruposService {
 
-    private GruposRepository gruposRepository;
-    private GruposMapper gruposMapper;
+    private final GruposRepository gruposRepository;
+    private final GruposMapper gruposMapper;
 
     public GruposService(GruposRepository gruposRepository, GruposMapper gruposMapper) {
         this.gruposRepository = gruposRepository;
