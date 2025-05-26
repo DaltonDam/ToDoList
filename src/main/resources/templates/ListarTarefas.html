@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Tabela de Tarefas</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<h1>Lista de Tarefas</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Status</th>
+        <th>Grupo</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tarefa : ${tarefas}">
+        <td th:text="${tarefa.id}"></td>
+        <td th:text="${tarefa.nome}"></td>
+        <td th:text="${tarefa.status}"></td>
+
+        <td>
+            <span th:if="${tarefa.grupos != null}" th:text="${tarefa.grupos.nome}"></span>
+            <span th:if="${tarefa.grupos == null}">Sem grupo</span>
+        </td>
+        <td>
+            <a th:href="@{/tarefas/ui/listar/{id}(id=${tarefa.id})}">Ver detalhes</a>
+            <a th:href="@{/tarefas/ui/alterar/{id}(id=${tarefa.id})}">Alterar</a>
+            <a th:href="@{/tarefas/ui/deletar/{id}(id=${tarefa.id})}">Deletar</a>
+        </td>
+    </tr>
+
+    </tr>
+    </tbody>
+</table>
+<table>
+    <td>
+        <a class="btn-adicionar" th:href="@{/tarefas/ui/adicionar}">Adicionar Nova Tarefa</a>
+    </td>
+
+</table>
+
+
+</body>
+</html>

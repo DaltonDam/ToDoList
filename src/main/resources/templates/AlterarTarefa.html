@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Alterar Tarefa</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<h1>Alterar Tarefa</h1>
+
+<form th:action="@{/tarefas/ui/alterar}" th:object="${tarefa}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+
+    <label>Nome:</label>
+    <input type="text" th:field="*{nome}" required/><br/>
+
+    <label>Descrição:</label>
+    <input type="text" th:field="*{descricao}" required/><br/>
+
+    <label>Data de Criação:</label>
+    <input type="datetime-local" th:field="*{dataCriacao}" /><br/>
+
+    <label>Data de Conclusão:</label>
+    <input type="datetime-local" th:field="*{dataConclusao}" /><br/>
+
+    <label>Status:</label>
+    <select th:field="*{status}">
+        <option value="PENDENTE">PENDENTE</option>
+        <option value="EM_ANDAMENTO">EM ANDAMENTO</option>
+        <option value="CONCLUIDA">CONCLUÍDA</option>
+    </select><br/>
+
+    <label>Grupo:</label>
+    <select th:field="*{grupos.id}">
+        <option th:each="grupo : ${grupos}"
+                th:value="${grupo.id}"
+                th:text="${grupo.nome}">
+        </option>
+    </select><br/>
+
+    <button type="submit">Salvar Alterações</button>
+</form>
+
+<a th:href="@{/tarefas/ui/listar}">Voltar</a>
+
+</body>
+</html>

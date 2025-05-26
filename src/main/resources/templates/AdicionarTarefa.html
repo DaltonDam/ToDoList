@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Adicionar Tarefa</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Adicionar Tarefa</h1>
+<div class="form-container">
+    <div th:if="${mensagem}" class="mensagem" th:text="${mensagem}"></div>
+    <form th:action="@{/tarefas/ui/salvar}" th:object="${tarefa}" method="post">
+
+        <label for="nome">Nome:</label><br/>
+        <input type="text" id="nome" th:field="*{nome}" required/><br/><br/>
+
+        <label for="descricao">Descrição:</label><br/>
+        <textarea id="descricao" th:field="*{descricao}" placeholder="Descrição da tarefa"></textarea><br/><br/>
+
+        <label for="dataCriacao">Data de Criação:</label><br/>
+        <input type="datetime-local" id="dataCriacao" th:field="*{dataCriacao}" /><br/><br/>
+
+        <label for="dataConclusao">Data de Conclusão:</label><br/>
+        <input type="datetime-local" id="dataConclusao" th:field="*{dataConclusao}" /><br/><br/>
+
+        <label for="status">Status:</label><br/>
+        <select id="status" th:field="*{status}">
+            <option th:each="status : ${T(TodoList.Tarefas.StatusTarefa).values()}"
+                    th:value="${status}" th:text="${status}">Status</option>
+        </select><br/><br/>
+
+        <label for="grupo">Grupo:</label>
+        <select id="grupo" name="grupos.id">
+            <option value="">Selecione um grupo</option>
+            <option th:each="grupo : ${grupos}"
+                    th:value="${grupo.id}"
+                    th:text="${grupo.nome}">
+            </option>
+        </select>
+
+
+        <button type="submit">Salvar Tarefa</button>
+
+    </form>
+    <a th:href="@{/tarefas/ui/listar}">Voltar para lista de tarefas</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Detalhes da Tarefa</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<h1>Detalhes da Tarefa</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Status</th>
+        <th>Descrição</th>
+        <th>Data de Criação</th>
+        <th>Data de Conclusão</th>
+        <th>Grupo</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${tarefa.id}"></td>
+        <td th:text="${tarefa.nome}"></td>
+        <td th:text="${tarefa.status}"></td>
+        <td th:text="${tarefa.descricao}"></td>
+        <td th:text="${tarefa.dataCriacao}"></td>
+        <td th:text="${tarefa.dataConclusao}"></td>
+        <td>
+            <span th:if="${tarefa.grupos != null}" th:text="${tarefa.grupos.nome}"></span>
+            <span th:if="${tarefa.grupos == null}">Sem grupo</span>
+        </td>
+        <td>
+            <a th:href="@{/tarefas/ui/listar}">Voltar</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
