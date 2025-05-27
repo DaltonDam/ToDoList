@@ -1,13 +1,13 @@
-# 📋 ToDoList API
+# ToDoList API
 
 Uma API REST desenvolvida em Java com Spring Boot para gerenciamento de tarefas. Possui integração com Thymeleaf para renderização das tarefas no front-end.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 - Criar, listar, editar e excluir tarefas.
 - Filtrar tarefas por status e grupo.
 - Gerenciar tarefas diretamente pela interface web com Thymeleaf.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - Java
 - Spring Boot
 - Spring Data JPA
@@ -16,9 +16,3 @@ Uma API REST desenvolvida em Java com Spring Boot para gerenciamento de tarefas.
 - Banco de dados H2
 - Maven
 - Docker
-- Git e GitHub
-
-## 🔧 Como executar
-1. Clone o repositório:
-```bash
-git clone [link-do-repo]
