@@ -1,6 +1,6 @@
-package TodoList.Tarefas;
+package ToDoList.Tarefas;
 
-import TodoList.Grupos.GruposModel;
+import ToDoList.Grupos.GruposModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

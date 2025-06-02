@@ -1,7 +1,6 @@
-package TodoList.Tarefas;
+package ToDoList.Tarefas;
 
-import TodoList.Grupos.GruposRepository;
-import TodoList.Grupos.GruposService;
+import ToDoList.Grupos.GruposService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

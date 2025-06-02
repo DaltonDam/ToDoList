@@ -1,6 +1,6 @@
-package TodoList.Tarefas;
+package ToDoList.Tarefas;
 
-import TodoList.Grupos.GruposModel;
+import ToDoList.Grupos.GruposModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

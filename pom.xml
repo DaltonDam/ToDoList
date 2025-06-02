@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Dalton</groupId>
-	<artifactId>TodoList</artifactId>
+	<artifactId>ToDoList</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TodoList</name>
+	<name>ToDoList</name>
 	<description>To-do list com Spring Boot</description>
 	<url/>
 	<licenses>

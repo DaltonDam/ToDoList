@@ -1,4 +1,4 @@
-package TodoList.Tarefas;
+package ToDoList.Tarefas;
 
 public enum StatusTarefa {
     PENDENTE,

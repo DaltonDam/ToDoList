@@ -1,6 +1,6 @@
-package TodoList.Grupos;
+package ToDoList.Grupos;
 
-import TodoList.Tarefas.TarefaModel;
+import ToDoList.Tarefas.TarefaModel;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

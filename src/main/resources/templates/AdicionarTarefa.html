@@ -25,7 +25,7 @@
 
         <label for="status">Status:</label><br/>
         <select id="status" th:field="*{status}">
-            <option th:each="status : ${T(TodoList.Tarefas.StatusTarefa).values()}"
+            <option th:each="status : ${T(ToDoList.Tarefas.StatusTarefa).values()}"
                     th:value="${status}" th:text="${status}">Status</option>
         </select><br/><br/>
 
