@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class TarefaDTO {
@@ -26,5 +25,59 @@ public class TarefaDTO {
 
     private String nome;
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public StatusTarefa getStatus() {
+        return status;
+    }
+
+    public LocalDateTime getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public LocalDateTime getDataConclusao() {
+        return dataConclusao;
+    }
+
+    public GruposModel getGrupos() {
+        return grupos;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setStatus(StatusTarefa status) {
+        this.status = status;
+    }
+
+    public void setDataCriacao(LocalDateTime dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public void setDataConclusao(LocalDateTime dataConclusao) {
+        this.dataConclusao = dataConclusao;
+    }
+
+    public void setGrupos(GruposModel grupos) {
+        this.grupos = grupos;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

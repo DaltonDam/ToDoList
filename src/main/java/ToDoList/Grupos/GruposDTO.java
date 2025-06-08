@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class GruposDTO {
@@ -18,5 +17,27 @@ public class GruposDTO {
 
     private List<TarefaModel> tarefas;
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public List<TarefaModel> getTarefas() {
+        return tarefas;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setTarefas(List<TarefaModel> tarefas) {
+        this.tarefas = tarefas;
+    }
 }

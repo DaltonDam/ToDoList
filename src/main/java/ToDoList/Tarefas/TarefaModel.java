@@ -10,7 +10,6 @@ import lombok.ToString;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "tb_tarefa")
@@ -43,8 +42,59 @@ public class TarefaModel {
     @JoinColumn(name = "grupos_id") // Foreing Key
     private GruposModel grupos;
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getDescricao() {
+        return descricao;
+    }
 
+    public StatusTarefa getStatus() {
+        return status;
+    }
 
+    public LocalDateTime getDataCriacao() {
+        return dataCriacao;
+    }
 
+    public LocalDateTime getDataConclusao() {
+        return dataConclusao;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public GruposModel getGrupos() {
+        return grupos;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setStatus(StatusTarefa status) {
+        this.status = status;
+    }
+
+    public void setDataCriacao(LocalDateTime dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public void setDataConclusao(LocalDateTime dataConclusao) {
+        this.dataConclusao = dataConclusao;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setGrupos(GruposModel grupos) {
+        this.grupos = grupos;
+    }
 }
