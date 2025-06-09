@@ -19,8 +19,10 @@ public class GruposModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "nome")
     private String nome;
 
     // Um grupo pode ter várias tasks
