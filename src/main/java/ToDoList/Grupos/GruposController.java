@@ -1,4 +1,4 @@
-package TodoList.Grupos;
+package ToDoList.Grupos;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

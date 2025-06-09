@@ -1,4 +1,4 @@
-package TodoList.Tarefas;
+package ToDoList.Tarefas;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

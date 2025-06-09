@@ -1,4 +1,4 @@
-package TodoList.Grupos;
+package ToDoList.Grupos;
 
 import org.springframework.stereotype.Component;
 
