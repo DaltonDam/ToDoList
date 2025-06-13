@@ -13,6 +13,6 @@ Uma API REST desenvolvida em Java com Spring Boot para gerenciamento de tarefas.
 - Spring Data JPA
 - JPA (Hibernate)
 - Flyway (migração de banco de dados)
-- Banco de dados H2
+- PostegreSQL
 - Maven
 - Docker
